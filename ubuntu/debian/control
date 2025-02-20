@@ -8,6 +8,7 @@ Build-Depends: cmake,
                doxygen,
                dh-python,
                libtinyxml2-dev,
+               libwebsockets-dev,
                libgz-tools2-dev,
                libgz-cmake4-dev,
                libgz-common6-av-dev,
@@ -81,6 +82,7 @@ Package: libgz-sim10-dev
 Architecture: any
 Section: libdevel
 Depends: libtinyxml2-dev,
+         libwebsockets-dev,
          libgz-tools2-dev,
          libgz-cmake4-dev,
          libgz-common6-av-dev,
