@@ -69,7 +69,9 @@ Package: libgz-sim10-plugins
 Architecture: any
 Section: libs
 Pre-Depends: ${misc:Pre-Depends}
-Depends: ${shlibs:Depends}, ${misc:Depends}
+Depends: ${shlibs:Depends},
+         ${misc:Depends},
+         libwebsockets-dev
 Recommends: python3-gz-sim10
 Multi-Arch: same
 Description: Gazebo Sim classes and functions for robot apps - Plugins
