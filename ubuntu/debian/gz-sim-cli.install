@@ -1,4 +1,5 @@
+usr/libexec/gz/sim*/*
 usr/lib/ruby/gz/*.rb
-usr/share/*/*[0-99]*.yaml
-usr/share/*/model[0-99]*.yaml
+usr/share/*/sim*.yaml
+usr/share/*/model*.yaml
 usr/share/gz/*.completion*/*
