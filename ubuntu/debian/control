@@ -44,7 +44,7 @@ Section: libs
 Pre-Depends: ${misc:Pre-Depends}
 Depends: ${shlibs:Depends},
          ${misc:Depends},
-         qml-module-qtqml-models2
+         qml6-module-qtqml-models
 Recommends: gz-sim10-cli
 Multi-Arch: same
 Description: Gazebo Sim classes and functions for robot apps - Shared library
