@@ -1,0 +1,2 @@
+# BackwardConfig.cmake is a third-party CMake file that's not needed for packaging
+usr/lib/x86_64-linux-gnu/cmake/backward/BackwardConfig.cmake
