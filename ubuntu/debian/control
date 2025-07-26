@@ -143,3 +143,35 @@ Description: Gazebo Sim classes and functions for robot apps - Debug symbols
  designed to rapidly develop robot applications.
  .
  Debug symbols
+
+Package: gz-jetty-sim
+Depends: libgz-sim10-dev (= ${binary:Version}), ${misc:Depends}
+Architecture: all
+Priority: optional
+Section: metapackages
+Description: alias package
+ Provides a package for Jetty without exposing the version number.
+
+Package: gz-jetty-sim-cli
+Depends: gz-sim10-cli (= ${binary:Version}), ${misc:Depends}
+Architecture: all
+Priority: optional
+Section: metapackages
+Description: alias package
+ Provides a package for Jetty without exposing the version number.
+
+Package: gz-jetty-sim-plugins
+Depends: libgz-sim10-plugins (= ${binary:Version}), ${misc:Depends}
+Architecture: all
+Priority: optional
+Section: metapackages
+Description: alias package
+ Provides a package for Jetty without exposing the version number.
+
+Package: gz-jetty-sim-python
+Depends: python3-gz-sim10 (= ${binary:Version}), ${misc:Depends}
+Architecture: all
+Priority: optional
+Section: metapackages
+Description: alias package
+ Provides a package for Jetty without exposing the version number.
