@@ -58,12 +58,25 @@ Architecture: any
 Depends: libgz-sim10 (= ${binary:Version}),
          ${shlibs:Depends},
          ${misc:Depends}
+Recommends: gz-sim10-server
 Multi-Arch: no
 Description: Gazebo Sim classes and functions for robot apps - CLI
  Gazebo Sim is a component in the Gazebo framework, a set of libraries
  designed to rapidly develop robot applications.
  .
  The package ships the CLI.
+
+Package: gz-sim10-server
+Architecture: any
+Depends: libgz-sim10 (= ${binary:Version}),
+         ${shlibs:Depends},
+         ${misc:Depends}
+Multi-Arch: no
+Description: Gazebo Sim classes and functions for robot apps - Server
+ Gazebo Sim is a component in the Gazebo framework, a set of libraries
+ designed to rapidly develop robot applications.
+ .
+ The package ships the simulation server.
 
 Package: libgz-sim10-plugins
 Architecture: any
