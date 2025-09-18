@@ -53,9 +53,24 @@ Description: Gazebo Sim classes and functions for robot apps - Shared library
  .
  Main shared library
 
+Package: libgz-sim10-gui
+Architecture: any
+Section: libs
+Pre-Depends: ${misc:Pre-Depends}
+Depends: libgz-sim10 (= ${binary:Version}),
+         ${shlibs:Depends},
+         ${misc:Depends}
+Multi-Arch: same
+Description: Gazebo Sim classes and functions for robot apps - GUI library
+ Gazebo Sim is a component in the Gazebo framework, a set of libraries
+ designed to rapidly develop robot applications.
+ .
+ GUI shared library and configuration files
+
 Package: gz-sim10-cli
 Architecture: any
 Depends: libgz-sim10 (= ${binary:Version}),
+         libgz-sim10-gui (= ${binary:Version}),
          ${shlibs:Depends},
          ${misc:Depends}
 Recommends: gz-sim10-server
@@ -91,6 +106,19 @@ Description: Gazebo Sim classes and functions for robot apps - Plugins
  .
  Plugins collection
 
+Package: libgz-sim10-plugins-gui
+Architecture: any
+Section: libs
+Pre-Depends: ${misc:Pre-Depends}
+Depends: ${shlibs:Depends}, ${misc:Depends}
+Recommends: libgz-sim10-plugins
+Multi-Arch: same
+Description: Gazebo Sim classes and functions for robot apps - GUI Plugins
+ Gazebo Sim is a component in the Gazebo framework, a set of libraries
+ designed to rapidly develop robot applications.
+ .
+ GUI Plugins collection
+
 Package: libgz-sim10-dev
 Architecture: any
 Section: libdevel
@@ -116,7 +144,9 @@ Depends: libtinyxml2-dev,
          libgz-utils4-dev,
          libsdformat16-dev,
          libgz-sim10 (= ${binary:Version}),
+         libgz-sim10-gui (= ${binary:Version}),
          libgz-sim10-plugins (= ${binary:Version}),
+         libgz-sim10-plugins-gui (= ${binary:Version}),
          ${misc:Depends}
 Multi-Arch: same
 Description: Gazebo Sim classes and functions for robot apps - Development files

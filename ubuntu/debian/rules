@@ -34,3 +34,6 @@ override_dh_auto_install:
 	dh_auto_install
 	install -d debian/tmp/usr/share/gz/gz-sim10/
 	install ./obj-*/*.tag.xml debian/tmp/usr/share/gz/gz-sim10/
+	# Remove gui library in libgz-sim already in libgz-sim-gui
+	$(RM) debian/libgz-sim10/usr/lib/*/libgz-sim-gui*
+
