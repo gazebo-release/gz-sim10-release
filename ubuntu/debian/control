@@ -44,7 +44,6 @@ Section: libs
 Pre-Depends: ${misc:Pre-Depends}
 Depends: ${shlibs:Depends},
          ${misc:Depends}
-Recommends: gz-sim10-cli
 Multi-Arch: same
 Description: Gazebo Sim classes and functions for robot apps - Shared library
  Gazebo Sim is a component in the Gazebo framework, a set of libraries
@@ -71,9 +70,15 @@ Package: gz-sim10-cli
 Architecture: any
 Depends: libgz-sim10 (= ${binary:Version}),
          libgz-sim10-gui (= ${binary:Version}),
+         libgz-sim10-plugins (= ${binary:Version}),
+         libgz-sim10-plugins-gui (= ${binary:Version}),
+         libgz-physics9-dartsim,
          ${shlibs:Depends},
          ${misc:Depends}
+# Note that the -server package hosts the standalone executable that is
+# not used to call "gz sim".
 Recommends: gz-sim10-server
+Suggests: libgz-physics9-bullet, libgz-physics9-tpe
 Multi-Arch: no
 Description: Gazebo Sim classes and functions for robot apps - CLI
  Gazebo Sim is a component in the Gazebo framework, a set of libraries
@@ -84,21 +89,23 @@ Description: Gazebo Sim classes and functions for robot apps - CLI
 Package: gz-sim10-server
 Architecture: any
 Depends: libgz-sim10 (= ${binary:Version}),
+         libgz-sim10-plugins (= ${binary:Version}),
+         libgz-physics9-dartsim
          ${shlibs:Depends},
          ${misc:Depends}
+Suggests: libgz-physics9-bullet, libgz-physics9-tpe
 Multi-Arch: no
 Description: Gazebo Sim classes and functions for robot apps - Server
  Gazebo Sim is a component in the Gazebo framework, a set of libraries
  designed to rapidly develop robot applications.
  .
- The package ships the simulation server.
+ The package ships the simulation STANDALONE server.
 
 Package: libgz-sim10-plugins
 Architecture: any
 Section: libs
 Pre-Depends: ${misc:Pre-Depends}
 Depends: ${shlibs:Depends}, ${misc:Depends}
-Recommends: python3-gz-sim10
 Multi-Arch: same
 Description: Gazebo Sim classes and functions for robot apps - Plugins
  Gazebo Sim is a component in the Gazebo framework, a set of libraries
@@ -148,6 +155,7 @@ Depends: libtinyxml2-dev,
          libgz-sim10-plugins (= ${binary:Version}),
          libgz-sim10-plugins-gui (= ${binary:Version}),
          ${misc:Depends}
+Recommends: python3-gz-sim10
 Multi-Arch: same
 Description: Gazebo Sim classes and functions for robot apps - Development files
  Gazebo Sim is a component in the Gazebo framework, a set of libraries
@@ -166,7 +174,7 @@ Depends: libgz-sim10 (= ${binary:Version}),
          ${misc:Depends},
          ${python3:Depends},
          ${shlibs:Depends},
-Enhances: libgz-sim10
+Enhances: libgz-sim10-dev
 Description: Gazebo Sim classes and functions for robot apps - Development files
  Gazebo Sim is a component in the Gazebo framework, a set of libraries
  designed to rapidly develop robot applications.
