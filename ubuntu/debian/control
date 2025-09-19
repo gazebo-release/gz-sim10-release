@@ -90,7 +90,7 @@ Package: gz-sim10-server
 Architecture: any
 Depends: libgz-sim10 (= ${binary:Version}),
          libgz-sim10-plugins (= ${binary:Version}),
-         libgz-physics9-dartsim
+         libgz-physics9-dartsim,
          ${shlibs:Depends},
          ${misc:Depends}
 Suggests: libgz-physics9-bullet, libgz-physics9-tpe
