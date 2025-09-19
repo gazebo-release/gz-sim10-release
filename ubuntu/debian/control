@@ -43,8 +43,7 @@ Architecture: any
 Section: libs
 Pre-Depends: ${misc:Pre-Depends}
 Depends: ${shlibs:Depends},
-         ${misc:Depends},
-         qml6-module-qtqml-models
+         ${misc:Depends}
 Recommends: gz-sim10-cli
 Multi-Arch: same
 Description: Gazebo Sim classes and functions for robot apps - Shared library
@@ -58,6 +57,7 @@ Architecture: any
 Section: libs
 Pre-Depends: ${misc:Pre-Depends}
 Depends: libgz-sim10 (= ${binary:Version}),
+         qml6-module-qtqml-models,
          ${shlibs:Depends},
          ${misc:Depends}
 Multi-Arch: same
