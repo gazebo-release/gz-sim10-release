@@ -3,7 +3,7 @@ Maintainer: Jose Luis Rivero <jrivero@osrfoundation.org>
 Section: science
 Priority: optional
 Build-Depends: cmake,
-               pkg-config,
+               pkgconf,
                debhelper (>= 13),
                doxygen,
                dh-python,
@@ -15,6 +15,7 @@ Build-Depends: cmake,
                libgz-common7-graphics-dev,
                libgz-common7-io-dev,
                libgz-common7-profiler-dev,
+               libgz-common7-testing-dev,
                libgz-common7-events-dev,
                libgz-fuel-tools11-dev,
                libgz-gui10-dev,
@@ -137,6 +138,7 @@ Depends: libtinyxml2-dev,
          libgz-common7-graphics-dev,
          libgz-common7-profiler-dev,
          libgz-common7-events-dev,
+         libgz-common7-testing-dev,
          libgz-fuel-tools11-dev,
          libgz-gui10-dev,
          libgz-math9-dev,
@@ -194,3 +196,35 @@ Description: Gazebo Sim classes and functions for robot apps - Debug symbols
  designed to rapidly develop robot applications.
  .
  Debug symbols
+
+Package: gz-jetty-sim
+Depends: libgz-sim10-dev (= ${binary:Version}), ${misc:Depends}
+Architecture: all
+Priority: optional
+Section: metapackages
+Description: alias package
+ Provides a package for Jetty without exposing the version number.
+
+Package: gz-jetty-sim-cli
+Depends: gz-sim10-cli (= ${binary:Version}), ${misc:Depends}
+Architecture: all
+Priority: optional
+Section: metapackages
+Description: alias package
+ Provides a package for Jetty without exposing the version number.
+
+Package: gz-jetty-sim-plugins
+Depends: libgz-sim10-plugins (= ${binary:Version}), ${misc:Depends}
+Architecture: all
+Priority: optional
+Section: metapackages
+Description: alias package
+ Provides a package for Jetty without exposing the version number.
+
+Package: gz-jetty-sim-python
+Depends: python3-gz-sim10 (= ${binary:Version}), ${misc:Depends}
+Architecture: all
+Priority: optional
+Section: metapackages
+Description: alias package
+ Provides a package for Jetty without exposing the version number.
