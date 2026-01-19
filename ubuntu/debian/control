@@ -60,6 +60,8 @@ Depends: libgz-sim10 (= ${binary:Version}),
          qml6-module-qtqml-models,
          ${shlibs:Depends},
          ${misc:Depends}
+Breaks: libgz-sim10 (<< 10.0.0-1.999~)
+Replaces: libgz-sim10 (<< 10.0.0-1.999~)
 Multi-Arch: same
 Description: Gazebo Sim classes and functions for robot apps - GUI library
  Gazebo Sim is a component in the Gazebo framework, a set of libraries
@@ -107,6 +109,8 @@ Architecture: any
 Section: libs
 Pre-Depends: ${misc:Pre-Depends}
 Depends: ${shlibs:Depends}, ${misc:Depends}
+Breaks: libgz-sim10 (<< 10.0.0-1.999~)
+Replaces: libgz-sim10 (<< 10.0.0-1.999~)
 Multi-Arch: same
 Description: Gazebo Sim classes and functions for robot apps - Plugins
  Gazebo Sim is a component in the Gazebo framework, a set of libraries
@@ -119,6 +123,8 @@ Architecture: any
 Section: libs
 Pre-Depends: ${misc:Pre-Depends}
 Depends: ${shlibs:Depends}, ${misc:Depends}
+Breaks: libgz-sim10 (<< 10.0.0-1.999~)
+Replaces: libgz-sim10 (<< 10.0.0-1.999~)
 Recommends: libgz-sim10-plugins
 Multi-Arch: same
 Description: Gazebo Sim classes and functions for robot apps - GUI Plugins
