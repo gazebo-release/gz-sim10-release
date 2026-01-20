@@ -1,2 +1,4 @@
 usr/lib/*/libgz-sim-gui.so.*
+usr/lib/*/libgz-sim-camera-video-recorder-system.so.*
+usr/lib/*/gz-sim-10/plugins/libgz-sim-camera-video-recorder-system.so*
 usr/share/*/*-*/gui/*

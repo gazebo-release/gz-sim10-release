@@ -30,6 +30,10 @@ override_dh_install:
 	$(RM) debian/gz-sim*/usr/share/gz/gz-sim*/gz-sim*.tag.xml
 	# Remove gui library in libgz-sim already in libgz-sim-gui
 	$(RM) debian/libgz-sim10/usr/lib/*/libgz-sim-gui*
+	# Remove camera-video-recorder-system in libgz-sim10 already in libgz-sim10-gui
+	$(RM) debian/libgz-sim10/usr/lib/*/libgz-sim-camera-video-recorder-system*
+	# Remove camera-video-recorder-system plugin in libgz-sim10-plugins already in libgz-sim10-gui
+	$(RM) debian/libgz-sim10-plugins/usr/lib/*/gz-sim-10/plugins/libgz-sim-camera-video-recorder-system*
 
 override_dh_auto_test:
 	# failing tests needs inspection
