@@ -94,9 +94,10 @@ Architecture: any
 Depends: libgz-sim10 (= ${binary:Version}),
          libgz-sim10-plugins (= ${binary:Version}),
          libgz-physics9-dartsim,
+	 libgz-rendering10-ogre2,
          ${shlibs:Depends},
          ${misc:Depends}
-Suggests: libgz-physics9-bullet, libgz-physics9-tpe
+Suggests: libgz-physics9-bullet, libgz-physics9-tpe, libgz-rendering10-ogre1
 Multi-Arch: no
 Description: Gazebo Sim classes and functions for robot apps - Server
  Gazebo Sim is a component in the Gazebo framework, a set of libraries
