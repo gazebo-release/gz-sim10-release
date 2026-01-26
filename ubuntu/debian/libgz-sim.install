@@ -1,6 +1,5 @@
 usr/lib/*/*.so.*
 usr/share/*/*-*/*.config
-usr/share/*/*-*/gui/*
 usr/share/*/*-*/worlds/*
 usr/share/*/*-*/media/*
 obj-*/gz-logo[0-99]*.svg usr/share/icons/hicolor/scalable/apps/

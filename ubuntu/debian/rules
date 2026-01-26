@@ -12,18 +12,8 @@ override_dh_auto_configure:
 	dh_auto_configure -- \
 	-DCMAKE_BUILD_TYPE=RelWithDebInfo \
 	-DUSE_SYSTEM_PATHS_FOR_PYTHON_INSTALLATION=ON \
-	-DUSE_DIST_PACKAGES_FOR_PYTHON=ON
-
-override_dh_install:
-	dh_install --
-	$(RM) debian/gz-sim*/usr/share/gz/gz-sim*/gz-sim*.tag.xml
-
-override_dh_auto_test:
-	# failing tests needs inspection
-	true
-
-override_dh_strip:
-	dh_strip -a --dbg-package=libgz-sim10-dbg
+	-DUSE_DIST_PACKAGES_FOR_PYTHON=ON \
+	-DBUILD_TESTING=OFF
 
 # Execute doc creation to export at least the doxygen tag file
 override_dh_auto_build:
@@ -34,3 +24,20 @@ override_dh_auto_install:
 	dh_auto_install
 	install -d debian/tmp/usr/share/gz/gz-sim10/
 	install ./obj-*/*.tag.xml debian/tmp/usr/share/gz/gz-sim10/
+
+override_dh_install:
+	dh_install --
+	$(RM) debian/gz-sim*/usr/share/gz/gz-sim*/gz-sim*.tag.xml
+	# Remove gui library in libgz-sim already in libgz-sim-gui
+	$(RM) debian/libgz-sim10/usr/lib/*/libgz-sim-gui*
+	# Remove camera-video-recorder-system in libgz-sim10 already in libgz-sim10-gui
+	$(RM) debian/libgz-sim10/usr/lib/*/libgz-sim-camera-video-recorder-system*
+	# Remove camera-video-recorder-system plugin in libgz-sim10-plugins already in libgz-sim10-gui
+	$(RM) debian/libgz-sim10-plugins/usr/lib/*/gz-sim-10/plugins/libgz-sim-camera-video-recorder-system*
+
+override_dh_auto_test:
+	# failing tests needs inspection
+	true
+
+override_dh_strip:
+	dh_strip -a --dbg-package=libgz-sim10-dbg
