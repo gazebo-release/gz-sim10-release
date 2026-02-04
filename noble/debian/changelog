@@ -1,3 +1,9 @@
+gz-sim10 (10.1.1-1~noble) noble; urgency=medium
+
+  * gz-sim10 10.1.1-1 release
+
+ -- Ian Chen <ichen@openrobotics.org>  Wed, 04 Feb 2026 03:55:16 +0000
+
 gz-sim10 (10.1.0-1~noble) noble; urgency=medium
 
   * gz-sim10 10.1.0-1 release
