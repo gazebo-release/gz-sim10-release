@@ -94,7 +94,8 @@ Architecture: any
 Depends: libgz-sim10 (= ${binary:Version}),
          libgz-sim10-plugins (= ${binary:Version}),
          libgz-physics9-dartsim,
-	 libgz-rendering10-ogre2,
+         libgz-rendering10-ogre2,
+         libgz-sensors10-dev,
          ${shlibs:Depends},
          ${misc:Depends}
 Suggests: libgz-physics9-bullet, libgz-physics9-tpe, libgz-rendering10-ogre1
