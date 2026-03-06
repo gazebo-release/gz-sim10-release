@@ -1,3 +1,9 @@
+gz-sim10 (10.1.1-1.995~noble) noble; urgency=medium
+
+  * gz-sim10 10.1.1-1.995 release
+
+ -- Jose Luis Rivero <jrivero@honurobotics.com>  Fri, 06 Mar 2026 22:02:54 +0100
+
 gz-sim10 (10.1.1-1.994~noble) noble; urgency=medium
 
   * gz-sim10 10.1.1-1.994 release
