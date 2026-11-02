@@ -1,3 +1,9 @@
+gz-sim10 (10.6.0-1~resolute) resolute; urgency=medium
+
+  * gz-sim10 10.6.0-1 release
+
+ -- Carlos Agüero <caguero@honurobotics.com>  Mon, 02 Nov 2026 18:50:49 +0000
+
 gz-sim10 (10.5.0-2~resolute) resolute; urgency=medium
 
   * gz-sim10 10.5.0-2 release
